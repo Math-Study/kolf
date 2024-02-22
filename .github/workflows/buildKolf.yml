@@ -1,0 +1,24 @@
+name: kdesrc-build workflow
+run-name: Kolf-Build
+on: [push]
+jobs:
+  Setup-Environment:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Change directory to the cloned repository
+        run: cd ${{ github.workspace }}
+      - name: Run initial setup
+        run: kdesrc-build --initial-setup
+      - name: Prepare KDE project data
+        run: kdesrc-build --metadata-only
+      - name: Verify kdesrc-build will work
+        run: kdesrc-build --pretend
+      - name: Build Kolf!
+        run: kdesrc-build kolf
+      - name: Confirm Build Path
+        run: |
+          ls ~/kde
+          ls ~/kde/usr
+          
