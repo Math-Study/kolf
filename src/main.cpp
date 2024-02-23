@@ -55,6 +55,7 @@ int main(int argc, char **argv)
 	aboutData.addAuthor(i18n("Niklas Knutsson"), i18n("Advanced putting mode"));
 	aboutData.addAuthor(i18n("Rik Hemsley"), i18n("Border around course"));
 	aboutData.addAuthor(i18n("Timo A. Hummel"), i18n("Some good sound effects"), QStringLiteral("timo.hummel@gmx.net"));
+	aboutData.addAuthor(i18n("Cattn"), i18n("Kolf Director"), QStringLiteral("timo.hummel@gmx.net"));
 
 	aboutData.addCredit(i18n("Rob Renaud"), i18n("Wall-bouncing help"));
 	aboutData.addCredit(i18n("Aaron Seigo"), i18n("Suggestions, bug reports"));
